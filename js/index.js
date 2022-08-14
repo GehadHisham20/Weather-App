@@ -17,7 +17,7 @@ let days= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sa
 
 
 async function getWeatherApi(city='cairo'){
-    apiResponse= await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4ba1fdc574854287875151135221802&q=${city}&days=3&aqi=no&alerts=no`)
+    apiResponse= await fetch(`/v1/forecast.json?key=4ba1fdc574854287875151135221802&q=${city}&days=3&aqi=no&alerts=no/* http://endpoint.com/http://api.weatherapi.com/v1/forecast.json?key=4ba1fdc574854287875151135221802&q=${city}&days=3&aqi=no&alerts=no/:splat 200!`)
     apiData= await apiResponse.json();
    displayFirstDayWeather();
    displayNextDaysWeather(1);
